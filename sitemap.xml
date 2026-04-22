@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Pages principales -->
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/le-chirurgien</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/contact</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Hubs categoriels -->
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/visage/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/medecine-esthetique/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Chirurgie du visage -->
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/visage/rhinoplastie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/visage/blepharoplastie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/visage/lifting-cervico-facial</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/visage/boules-de-bichat</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/visage/genioplastie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/visage/brow-lift</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/visage/otoplastie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ORL -->
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/orl/septoplastie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Corps -->
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/corps/liposuccion</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Medecine esthetique -->
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/medecine-esthetique/botox</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/medecine-esthetique/acide-hyaluronique-visage</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/medecine-esthetique/acide-hyaluronique-levres</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/medecine-esthetique/fils-tenseurs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/medecine-esthetique/sculptra</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.boulogne-billancourt-chirurgie.fr/interventions/medecine-esthetique/mesotherapie</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+</urlset>

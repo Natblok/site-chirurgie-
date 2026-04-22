@@ -2,97 +2,221 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr [NOM DU CHIRURGIEN] | Chirurgien [SPÉCIALITÉ] à [VILLE]</title>
-    <meta
-      name="description"
-      content="Site officiel du Dr [NOM DU CHIRURGIEN], chirurgien [SPÉCIALITÉ] à [VILLE]. Informations, interventions, accès au cabinet et prise de rendez-vous."
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/brand/favicon-96x96.png"
+      sizes="96x96"
     />
+    <link rel="shortcut icon" href="assets/img/brand/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/brand/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Dr GZAIEL" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/img/brand/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chirurgien plastique & ORL Paris – Boulogne-Billancourt | Dr Gzaiel</title>
+    <meta name="description" content="Dr Dany Gzaiel, chirurgien plastique et ORL à Paris et Boulogne-Billancourt. Rhinoplastie, chirurgie esthétique du visage, septoplastie, médecine esthétique." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <meta
-      property="og:title"
-      content="Dr [NOM DU CHIRURGIEN] | Chirurgien [SPÉCIALITÉ] à [VILLE]"
-    />
-    <meta
-      property="og:description"
-      content="Cabinet de chirurgie [SPÉCIALITÉ] à [VILLE] : présentation, interventions, FAQ et contact."
-    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="canonical" href="https://www.boulogne-billancourt-chirurgie.fr/" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Dr Dany Gzaiel" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="fr_FR" />
-
+    <meta property="og:site_name" content="Dr Dany Gzaiel — Chirurgien plastique & ORL" />
+    <meta property="og:title" content="Chirurgien plastique & ORL Paris – Boulogne-Billancourt | Dr Gzaiel" />
+    <meta property="og:description" content="Dr Dany Gzaiel, chirurgien plastique et ORL à Paris et Boulogne-Billancourt. Rhinoplastie, chirurgie esthétique du visage, septoplastie, médecine esthétique." />
+    <meta property="og:url" content="https://www.boulogne-billancourt-chirurgie.fr/" />
+    <meta property="og:image" content="https://www.boulogne-billancourt-chirurgie.fr/assets/img/brand/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chirurgien plastique & ORL Paris – Boulogne-Billancourt | Dr Gzaiel" />
+    <meta name="twitter:description" content="Dr Dany Gzaiel, chirurgien plastique et ORL à Paris et Boulogne-Billancourt. Rhinoplastie, chirurgie esthétique du visage, septoplastie, médecine esthétique." />
+    <meta name="twitter:image" content="https://www.boulogne-billancourt-chirurgie.fr/assets/img/brand/logo.png" />
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Physician",
-        "name": "Dr [NOM DU CHIRURGIEN]",
-        "medicalSpecialty": "[SPÉCIALITÉ]",
-        "telephone": "[TÉLÉPHONE]",
-        "address": {
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalBusiness",
+      "@id":"https://www.boulogne-billancourt-chirurgie.fr/#cabinet",
+      "name": "Cabinet du Dr Dany Gzaiel",
+      "url":"https://www.boulogne-billancourt-chirurgie.fr/",
+      "image": "https://www.boulogne-billancourt-chirurgie.fr/assets/img/brand/logo.png",
+      "logo": "https://www.boulogne-billancourt-chirurgie.fr/assets/img/brand/logo.png",
+      "telephone": "+33146212121",
+      "email": "gzaiel.dany@gmail.com",
+      "priceRange": "€€€",
+      "medicalSpecialty": ["PlasticSurgery","Otolaryngologic"],
+      "address": [
+        {
           "@type": "PostalAddress",
-          "streetAddress": "[ADRESSE]",
-          "addressLocality": "[VILLE]",
+          "streetAddress": "3 avenue Desfeux",
+          "postalCode": "92100",
+          "addressLocality": "Boulogne-Billancourt",
+          "addressRegion": "Île-de-France",
           "addressCountry": "FR"
         },
-        "url": "https://www.[DOMAINE].fr",
-        "openingHours": "[HORAIRES]",
-        "sameAs": ["[LIEN DOCTOLIB]"]
-      }
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Comment prendre rendez-vous ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Vous pouvez prendre rendez-vous via [LIEN DOCTOLIB] ou contacter directement le cabinet au [TÉLÉPHONE]."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Où se situe le cabinet ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Le cabinet se situe à [ADRESSE], à [VILLE]."
-            }
-          }
-        ]
-      }
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "21 rue Chanez",
+          "postalCode": "75016",
+          "addressLocality": "Paris",
+          "addressRegion": "Île-de-France",
+          "addressCountry": "FR"
+        }
+      ],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.8388,
+        "longitude": 2.2381
+      },
+      "areaServed": [
+        {"@type":"City","name":"Boulogne-Billancourt"},
+        {"@type":"City","name":"Paris"},
+        {"@type":"AdministrativeArea","name":"Île-de-France"}
+      ],
+      "openingHoursSpecification": [{
+        "@type":"OpeningHoursSpecification",
+        "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens":"09:00",
+        "closes":"18:30"
+      }],
+      "sameAs": [
+        "https://www.doctolib.fr/chirurgien/boulogne-billancourt/dany-gzaiel"
+      ]
+    },
+    {
+      "@type": "Physician",
+      "@id":"https://www.boulogne-billancourt-chirurgie.fr/#physician",
+      "name": "Dr Dany Gzaiel",
+      "gender": "Male",
+      "jobTitle": "Chirurgien plastique et ORL",
+      "medicalSpecialty": ["PlasticSurgery","Otolaryngologic"],
+      "worksFor": { "@id":"https://www.boulogne-billancourt-chirurgie.fr/#cabinet" },
+      "image": "https://www.boulogne-billancourt-chirurgie.fr/assets/img/portraits/portrait.jpg",
+      "url":"https://www.boulogne-billancourt-chirurgie.fr/le-chirurgien",
+      "telephone": "+33146212121",
+      "email": "gzaiel.dany@gmail.com",
+      "areaServed": [
+        {"@type":"City","name":"Boulogne-Billancourt"},
+        {"@type":"City","name":"Paris"}
+      ]
+    }
+    ]
+}
     </script>
   </head>
-  <body>
+  <body class="page-home">
     <a class="skip-link" href="#main">Aller au contenu</a>
 
-    <header class="site-header">
-      <div class="container nav">
-        <a href="#" class="brand">Dr [NOM DU CHIRURGIEN]</a>
+    <header class="site-header" id="site-header">
+      <div class="nav-inner">
+        <a
+          href=""
+          class="brand"
+          aria-label="Dr Dany Gzaiel — Accueil"
+        >
+          <img
+            src="assets/img/brand/logo-rond.png"
+            alt="Logo Dr Dany Gzaiel"
+            class="brand-logo"
+            width="48"
+            height="48"
+          />
+          <span class="brand-text"
+            >Dr Dany Gzaiel<br /><small>Chirurgien Esthétique</small></span
+          >
+        </a>
         <button
           class="menu-toggle"
+          type="button"
           aria-expanded="false"
           aria-controls="site-menu"
+          aria-label="Ouvrir le menu"
         >
-          Menu
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
+          <span class="menu-toggle__bar"></span>
         </button>
-        <nav id="site-menu" class="site-nav">
-          <a href="#chirurgien">Le chirurgien</a>
-          <a href="#interventions">Interventions</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+        <nav id="site-menu" class="site-nav" aria-label="Navigation principale">
+          <a data-nav href="le-chirurgien">Le chirurgien</a>
+          <div class="nav-item nav-item--has-mega" data-nav-item-mega>
+            <a data-nav href="interventions/">Interventions</a>
+            <button
+              class="mega-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mega-menu-interventions"
+            >
+              Voir les interventions
+            </button>
+            <div
+              id="mega-menu-interventions"
+              class="mega-menu is-hidden"
+              aria-label="Interventions principales"
+            >
+              <div class="container mega-menu__inner">
+                <a href="interventions/visage/rhinoplastie" class="mega-item">
+                  <span class="mega-item__num">01</span>
+                  <span class="mega-item__name">Rhinoplastie</span>
+                  <span class="mega-item__desc"
+                    >Correction morphologique et fonctionnelle du nez.</span
+                  >
+                </a>
+                <a href="interventions/visage/lifting-cervico-facial" class="mega-item">
+                  <span class="mega-item__num">02</span>
+                  <span class="mega-item__name">Lifting</span>
+                  <span class="mega-item__desc"
+                    >Traitement du relâchement du visage et du cou.</span
+                  >
+                </a>
+                <a href="interventions/visage/blepharoplastie" class="mega-item">
+                  <span class="mega-item__num">03</span>
+                  <span class="mega-item__name">Chirurgie du visage</span>
+                  <span class="mega-item__desc"
+                    >Blépharoplastie et corrections ciblées.</span
+                  >
+                </a>
+                <a href="interventions/corps/liposuccion" class="mega-item">
+                  <span class="mega-item__num">04</span>
+                  <span class="mega-item__name">Liposuccion</span>
+                  <span class="mega-item__desc"
+                    >Remodelage ciblé après analyse clinique.</span
+                  >
+                </a>
+                <a href="interventions/medecine-esthetique/" class="mega-item">
+                  <span class="mega-item__num">05</span>
+                  <span class="mega-item__name">Médecine esthétique</span>
+                  <span class="mega-item__desc"
+                    >Injections, fils tenseurs et traitements
+                    non-chirurgicaux.</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+          <a data-nav href="faq">FAQ</a>
+          <a data-nav href="contact">Contact</a>
+          <a class="nav-social" href="https://www.instagram.com/rhinoplastie.paris/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram — rhinoplastie.paris"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5.5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></a>
           <a
-            href="[LIEN DOCTOLIB]"
+            class="btn-nav-rdv"
+            href="https://www.doctolib.fr/chirurgien/boulogne-billancourt/dany-gzaiel"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-primary"
             >Prendre rendez-vous</a
           >
         </nav>
@@ -100,228 +224,426 @@
     </header>
 
     <main id="main">
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <p class="eyebrow">Cabinet de chirurgie [SPÉCIALITÉ] · [VILLE]</p>
-            <h1>Une prise en charge claire, rigoureuse et attentive.</h1>
-            <p class="hero-text">
-              Le Dr [NOM DU CHIRURGIEN] accueille ses patients à [VILLE] pour
-              des consultations en chirurgie [SPÉCIALITÉ], dans un cadre sobre,
-              rassurant et exigeant.
+      <section class="hero-full" aria-labelledby="home-title">
+        <picture class="hero-full__media">
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=828&amp;q=80&amp;h=1792&amp;fit=crop&amp;crop=center
+            "
+          />
+          <img
+            src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=1920&amp;q=90"
+            width="1920"
+            height="1080"
+            alt=""
+            fetchpriority="high"
+            decoding="async"
+          />
+        </picture>
+        <div class="hero-full__overlay" aria-hidden="true"></div>
+        <div class="hero-full__inner">
+          <div class="hero-full__text">
+            <p class="hero-full__label js-hero-label">
+              Cabinet du Dr Dany Gzaiel — Boulogne-Billancourt
             </p>
-            <div class="hero-actions">
+            <h1 id="home-title" class="hero-full__title">
+              <span class="hero-title-line"
+                ><span class="js-hero-line hero-line--upright"
+                  >Chirurgie plastique et</span
+                ></span
+              >
+              <span class="hero-title-line"
+                ><span class="js-hero-line hero-line--italic"
+                  >médecine esthétique.</span
+                ></span
+              >
+            </h1>
+            <p class="hero-full__sub js-hero-sub">
+              Le Dr Dany Gzaiel vous reçoit à Boulogne-Billancourt pour une
+              consultation attentive et une prise en charge structurée, à chaque
+              étape du parcours.
+            </p>
+            <div class="hero-full__actions js-hero-cta">
               <a
-                href="[LIEN DOCTOLIB]"
+                class="btn-hero btn-hero--primary"
+                href="https://www.doctolib.fr/chirurgien/boulogne-billancourt/dany-gzaiel"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn btn-primary"
-                >Prendre rendez-vous</a
               >
-              <a href="tel:[TÉLÉPHONE]" class="btn btn-secondary"
-                >Appeler le cabinet</a
-              >
+                <span>Prendre rendez-vous</span>
+                <span class="btn-hero__icon" aria-hidden="true">↗</span>
+              </a>
+              <a class="btn-hero-link" href="interventions/">
+                <span>Découvrir les interventions</span>
+                <span class="btn-hero-link__icon" aria-hidden="true">→</span>
+              </a>
             </div>
           </div>
-
-          <aside class="hero-card">
-            <p class="card-label">Informations pratiques</p>
-            <ul>
-              <li><strong>Spécialité :</strong> [SPÉCIALITÉ]</li>
-              <li><strong>Adresse :</strong> [ADRESSE]</li>
-              <li><strong>Téléphone :</strong> [TÉLÉPHONE]</li>
-              <li><strong>Horaires :</strong> [HORAIRES]</li>
-            </ul>
-          </aside>
+        </div>
+        <img
+          src="assets/img/brand/logo-rond.png"
+          alt=""
+          aria-hidden="true"
+          class="hero-logo-rond js-hero-logo"
+        />
+        <div class="hero-full__meta js-hero-meta" aria-hidden="true">
+          <p class="hero-full__tags">ORL · Plastique Facial · Cervico-Facial</p>
+          <a
+            class="hero-full__scroll"
+            href="#en-bref"
+            aria-label="Aller à la suite"
+          >
+            <span class="hero-full__scroll-label">Scroll</span>
+            <span class="hero-full__scroll-arrow">↓</span>
+          </a>
         </div>
       </section>
 
-      <section class="trust">
-        <div class="container trust-grid">
-          <div>
-            <p class="trust-kicker">Repères</p>
-            <p>Consultation sur rendez-vous</p>
-          </div>
-          <div>
-            <p class="trust-kicker">Accès</p>
-            <p>Cabinet situé à [VILLE]</p>
-          </div>
-          <div>
-            <p class="trust-kicker">Contact</p>
-            <p>[TÉLÉPHONE]</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="chirurgien" class="section">
-        <div class="container split">
-          <div>
-            <p class="section-kicker">Le chirurgien</p>
-            <h2>Une pratique fondée sur l’écoute et la précision.</h2>
-          </div>
-          <div>
-            <p>
-              Le Dr [NOM DU CHIRURGIEN], spécialiste en [SPÉCIALITÉ], reçoit ses
-              patients au cabinet de [VILLE]. La consultation permet d’exposer
-              la situation, de répondre aux questions et d’envisager une prise
-              en charge adaptée.
-            </p>
-            <p>
-              Les informations médicales, le déroulement des interventions et
-              les suites sont expliqués avec clarté, dans une approche sérieuse
-              et mesurée.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="interventions" class="section alt">
+      <section id="en-bref" class="home-brief js-reveal-section">
         <div class="container">
-          <p class="section-kicker">Interventions</p>
-          <h2>Les principales prises en charge du cabinet.</h2>
-          <div class="cards">
-            <article class="card">
-              <h3>Rhinoplastie</h3>
-              <p>
-                Évaluation de la demande, analyse du nez et explication du
-                parcours opératoire.
+          <div class="brief-grid">
+            <a
+              class="brief-col js-reveal"
+              href="le-chirurgien"
+              aria-label="Expérience — voir le chirurgien"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="brief-icon"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="8" r="6" />
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+              </svg>
+              <p class="brief-label">Expérience</p>
+              <p class="brief-stat">+20 ans</p>
+              <p class="brief-text">
+                Le Dr Dany Gzaiel exerce depuis plus de 15 ans avec une exigence
+                constante sur l'indication médicale et l'information loyale.
               </p>
-              <a href="#contact">Prendre contact</a>
-            </article>
-            <article class="card">
-              <h3>Liposuccion</h3>
-              <p>
-                Informations claires sur les indications, les suites et la
-                récupération.
+            </a>
+            <a
+              class="brief-col js-reveal"
+              href="le-chirurgien"
+              aria-label="Suivi — voir le chirurgien"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="brief-icon"
+                aria-hidden="true"
+              >
+                <path d="M9 11l3 3L22 4" />
+                <path
+                  d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                />
+              </svg>
+              <p class="brief-label">Suivi</p>
+              <p class="brief-stat">Structuré</p>
+              <p class="brief-text">
+                Il remet des consignes écrites, programme lui-même les contrôles
+                et reste joignable entre les rendez-vous.
               </p>
-              <a href="#contact">Prendre contact</a>
-            </article>
-            <article class="card">
-              <h3>Blépharoplastie</h3>
-              <p>
-                Approche sobre et personnalisée pour la chirurgie des paupières.
+            </a>
+            <a
+              class="brief-col js-reveal"
+              href="le-chirurgien"
+              aria-label="Consultation — voir le chirurgien"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="brief-icon"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"
+                />
+              </svg>
+              <p class="brief-label">Consultation</p>
+              <p class="brief-stat">~45 min</p>
+              <p class="brief-text">
+                Il vous accorde le temps nécessaire à l'examen et à l'échange,
+                sans précipitation, dès la première rencontre.
               </p>
-              <a href="#contact">Prendre contact</a>
-            </article>
-            <article class="card">
-              <h3>Augmentation mammaire</h3>
-              <p>
-                Consultation, explications préopératoires et suivi adapté à
-                chaque patiente.
-              </p>
-              <a href="#contact">Prendre contact</a>
-            </article>
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container split">
-          <div>
-            <p class="section-kicker">Méthode</p>
-            <h2>Informer, évaluer, décider avec mesure.</h2>
-          </div>
-          <div>
-            <p>
-              Chaque prise en charge commence par une consultation attentive,
-              avec un temps d’échange suffisant pour comprendre la demande et
-              expliquer les options possibles.
+      <section class="home-about js-reveal-section">
+        <div class="container about-grid">
+          <a class="about-column-link js-reveal" href="le-chirurgien">
+            <header class="section-head">
+              <p class="section-kicker">Le chirurgien</p>
+              <h2 class="section-title js-title-reveal">
+                Parcours, approche et <em class="ta">cadre de soin.</em>
+              </h2>
+              <p class="section-intro">
+                Découvrez le parcours du Dr Dany Gzaiel, sa méthode de travail
+                et la manière dont la consultation structure chaque décision.
+              </p>
+            </header>
+            <p class="about-body">
+              Le Dr Dany Gzaiel exerce la chirurgie plastique et esthétique à
+              Boulogne-Billancourt avec une exigence clinique constante : chaque
+              projet est discuté au regard des bénéfices attendus, des limites
+              et des alternatives possibles.
             </p>
-            <p>
-              Le site n’a pas vocation à remplacer une consultation, mais à
-              offrir un premier niveau d’information simple et fiable.
+            <p class="about-body">
+              La consultation pose un cadre clair avant toute décision. Il
+              privilégie une information honnête et un accompagnement mesuré, du
+              premier rendez-vous jusqu'au suivi postopératoire.
             </p>
+            <span class="about-more">Lire la page complète</span>
+          </a>
+          <figure class="about-media js-reveal">
+            <img
+              src="assets/img/portraits/portrait.jpg"
+              width="720"
+              height="900"
+              loading="lazy"
+              decoding="async"
+              alt=""
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section
+        class="home-interventions js-reveal-section"
+        aria-labelledby="interventions-heading"
+      >
+        <div class="container">
+          <header class="section-head js-reveal">
+            <p class="section-kicker">Interventions</p>
+            <h2
+              id="interventions-heading"
+              class="section-title js-title-reveal"
+            >
+              Ses <em class="ta">domaines d'expertise.</em>
+            </h2>
+            <p class="section-intro">
+              Le Dr Dany Gzaiel reçoit chaque patient en personne, de la
+              première consultation au suivi postopératoire.
+            </p>
+          </header>
+          <div class="intervention-list">
+            <a
+              href="interventions/visage/rhinoplastie"
+              class="intervention-row js-inter-row"
+              aria-label="Rhinoplastie — page dédiée"
+            >
+              <span class="intervention-num">01</span>
+              <div>
+                <h3 class="intervention-name">Rhinoplastie</h3>
+                <p class="intervention-desc">
+                  Correction morphologique et fonctionnelle du nez, projet
+                  défini en consultation.
+                </p>
+                <span class="intervention-hint">Découvrir →</span>
+              </div>
+            </a>
+            <a
+              href="interventions/visage/lifting-cervico-facial"
+              class="intervention-row js-inter-row"
+              aria-label="Lifting — page dédiée"
+            >
+              <span class="intervention-num">02</span>
+              <div>
+                <h3 class="intervention-name">Lifting</h3>
+                <p class="intervention-desc">
+                  Traitement du relâchement du visage et du cou — plan
+                  personnalisé.
+                </p>
+                <span class="intervention-hint">Découvrir →</span>
+              </div>
+            </a>
+            <a
+              href="interventions/visage/blepharoplastie"
+              class="intervention-row js-inter-row"
+              aria-label="Chirurgie du visage — page dédiée"
+            >
+              <span class="intervention-num">03</span>
+              <div>
+                <h3 class="intervention-name">Chirurgie du visage</h3>
+                <p class="intervention-desc">
+                  Blépharoplastie et corrections ciblées — approche mesurée du
+                  regard.
+                </p>
+                <span class="intervention-hint">Découvrir →</span>
+              </div>
+            </a>
+            <a
+              href="interventions/corps/liposuccion"
+              class="intervention-row js-inter-row"
+              aria-label="Liposuccion — page dédiée"
+            >
+              <span class="intervention-num">04</span>
+              <div>
+                <h3 class="intervention-name">Liposuccion</h3>
+                <p class="intervention-desc">
+                  Remodelage ciblé des volumes, lorsque l'indication est validée
+                  cliniquement.
+                </p>
+                <span class="intervention-hint">Découvrir →</span>
+              </div>
+            </a>
+            <a
+              href="interventions/medecine-esthetique/"
+              class="intervention-row js-inter-row"
+              aria-label="Médecine esthétique — page dédiée"
+            >
+              <span class="intervention-num">05</span>
+              <div>
+                <h3 class="intervention-name">Médecine esthétique</h3>
+                <p class="intervention-desc">
+                  Injections, fils tenseurs et biostimulation — résultats
+                  naturels sans chirurgie.
+                </p>
+                <span class="intervention-hint">Découvrir →</span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="faq" class="section alt">
-        <div class="container faq-wrap">
-          <div>
-            <p class="section-kicker">FAQ</p>
-            <h2>Questions fréquentes.</h2>
-          </div>
-
-          <div class="faq-list">
-            <details>
-              <summary>Comment prendre rendez-vous ?</summary>
-              <p>
-                Vous pouvez prendre rendez-vous via Doctolib ou contacter
-                directement le cabinet par téléphone.
+      <!-- ===== AVIS PATIENTS ===== -->
+      <section
+        class="home-testimonials js-reveal-section"
+        aria-labelledby="avis-title"
+      >
+        <div class="container">
+          <header class="section-head js-reveal">
+            <p class="section-kicker">Avis patients</p>
+            <h2 id="avis-title" class="section-title js-title-reveal">
+              Ce qu'ils disent <em class="ta">du Dr Gzaiel</em>
+            </h2>
+            <p class="section-intro">
+              Témoignages recueillis sur Estheticon — patients opérés ou suivis
+              en consultation.
+            </p>
+          </header>
+          <div class="testimonials-grid">
+            <blockquote class="testimonial-card js-reveal">
+              <p class="testimonial-text">
+                « C'est un artiste. Il est très compétent, il vous explique
+                tout… ne vous vend pas du rêve. Je suis très heureuse de l'avoir
+                rencontré. »
               </p>
-            </details>
-            <details>
-              <summary>Où se situe le cabinet ?</summary>
-              <p>Le cabinet est situé à [ADRESSE], à [VILLE].</p>
-            </details>
-            <details>
-              <summary>
-                Quels documents apporter lors de la première consultation ?
-              </summary>
-              <p>
-                Le secrétariat pourra vous préciser les éléments utiles selon
-                votre situation.
+              <footer class="testimonial-meta">
+                <cite>Patient Estheticon</cite> — Rhinoplastie
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card js-reveal">
+              <p class="testimonial-text">
+                « Médecin très compétent, à l'écoute, et rassurant. J'avais peur
+                d'entreprendre une telle consultation, pourtant le docteur
+                Gzaïel m'a mis en confiance. »
               </p>
-            </details>
-            <details>
-              <summary>
-                Les tarifs sont-ils communiqués lors de la consultation ?
-              </summary>
-              <p>
-                Les informations tarifaires et les modalités seront précisées au
-                cours de la consultation, selon l’indication et la prise en
-                charge envisagée.
+              <footer class="testimonial-meta">
+                <cite>Patient Estheticon</cite> — Consultation
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card js-reveal">
+              <p class="testimonial-text">
+                « J'ai été opérée d'une rhinoplastie. Il a de très bons
+                résultats. Je le recommande vivement. »
               </p>
-            </details>
+              <footer class="testimonial-meta">
+                <cite>Patient Estheticon</cite> — Rhinoplastie
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card js-reveal">
+              <p class="testimonial-text">
+                « Consulté pour un problème de respiration. Mes cloisons nasales
+                étaient complètement déviées. Aujourd'hui j'arrive enfin à
+                respirer correctement. »
+              </p>
+              <footer class="testimonial-meta">
+                <cite>Patient Estheticon</cite> — Septoplastie
+              </footer>
+            </blockquote>
+            <blockquote class="testimonial-card js-reveal">
+              <p class="testimonial-text">
+                « Excellent contact et très disponible. Consciencieux sur le
+                chirurgical. »
+              </p>
+              <footer class="testimonial-meta">
+                <cite>Patient Estheticon</cite> — Suivi
+              </footer>
+            </blockquote>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section contact-section">
-        <div class="container contact-grid">
-          <div>
-            <p class="section-kicker">Contact</p>
-            <h2>Prendre contact avec le cabinet.</h2>
-            <p>
-              Pour une demande de rendez-vous ou un renseignement, vous pouvez
-              joindre le cabinet directement.
+      <!-- ===== VIDÉO ===== -->
+      <section
+        class="home-video js-reveal-section"
+        aria-labelledby="video-title"
+      >
+        <div class="container">
+          <header class="section-head js-reveal">
+            <p class="section-kicker">En vidéo</p>
+            <h2 id="video-title" class="section-title js-title-reveal">
+              La philosophie <em class="ta">du Dr Gzaiel</em> sur la
+              rhinoplastie
+            </h2>
+            <p class="section-intro">
+              Le Dr Gzaiel explique son approche, les techniques utilisées et
+              l'importance du dialogue chirurgien-patient avant toute décision.
             </p>
-            <div class="contact-list">
-              <p><strong>Adresse :</strong> [ADRESSE]</p>
-              <p>
-                <strong>Téléphone :</strong>
-                <a href="tel:[TÉLÉPHONE]">[TÉLÉPHONE]</a>
-              </p>
-              <p><strong>Horaires :</strong> [HORAIRES]</p>
-              <p>
-                <strong>Rendez-vous :</strong>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="[LIEN DOCTOLIB]"
-                  >Prendre rendez-vous en ligne</a
-                >
-              </p>
-            </div>
-          </div>
-
-          <div class="map-card">
-            <div class="map-placeholder">Carte / accès cabinet</div>
-            <p class="map-note">
-              Ajouter ici un embed Google Maps ou une carte statique.
-            </p>
+          </header>
+          <div class="video-embed js-reveal">
+            <iframe
+              src="https://www.youtube.com/embed/TR_w3OaiDjc"
+              title="La philosophie du Dr Gzaiel — Rhinoplastie"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </section>
     </main>
 
-    <div class="mobile-bar">
-      <a href="tel:[TÉLÉPHONE]" class="btn btn-secondary">Appeler</a>
+    <div class="mobile-call-bar">
+      <a class="btn-stack" href="tel:0146212121">Appeler</a>
       <a
-        href="[LIEN DOCTOLIB]"
+        class="btn-stack"
+        href="https://www.doctolib.fr/chirurgien/boulogne-billancourt/dany-gzaiel"
         target="_blank"
         rel="noopener noreferrer"
-        class="btn btn-primary"
         >Rendez-vous</a
       >
     </div>
@@ -329,24 +651,44 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <p class="brand-foot">Dr [NOM DU CHIRURGIEN]</p>
-          <p>Chirurgie [SPÉCIALITÉ] à [VILLE]</p>
+          <a href="" class="footer-logo-wrap">
+            <img
+              src="assets/img/brand/banderole.png"
+              alt="Dr Dany Gzaiel — Chirurgien Esthétique"
+              class="footer-banderole"
+            />
+          </a>
+          <p class="footer-note">
+            Chirurgie ORL · Plastique Facial · Boulogne-Billancourt
+          </p>
         </div>
         <div>
-          <a href="#chirurgien">Le chirurgien</a>
-          <a href="#interventions">Interventions</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+          <a href="le-chirurgien">Le chirurgien</a>
+          <a href="interventions/">Interventions</a>
+          <a href="faq">FAQ</a>
+          <a href="contact">Contact</a>
         </div>
         <div>
-          <a href="/mentions-legales.html">Mentions légales</a>
-          <a href="/politique-confidentialite.html"
-            >Politique de confidentialité</a
+          <a
+            href="https://www.doctolib.fr/chirurgien/boulogne-billancourt/dany-gzaiel"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Prendre rendez-vous</a
           >
+          <a href="mailto:gzaiel.dany@gmail.com">gzaiel.dany@gmail.com</a>
+          <a href="tel:0146212121">01 46 21 21 21</a>
         </div>
       </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="assets/js/script.js" defer></script>
   </body>
 </html>
