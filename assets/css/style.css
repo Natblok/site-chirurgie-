@@ -320,6 +320,8 @@ a {
   background: transparent;
   cursor: pointer;
   color: var(--text);
+  position: relative;
+  z-index: 210;
 }
 
 .menu-toggle__bar {
@@ -1579,12 +1581,16 @@ a {
     inset: 0;
     z-index: 200;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    gap: 2rem;
+    gap: 1.1rem;
     background: var(--bg);
-    padding: 2rem;
+    padding: calc(5rem + env(safe-area-inset-top)) 1.5rem
+      calc(6rem + env(safe-area-inset-bottom));
     margin-right: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -1599,12 +1605,16 @@ a {
     pointer-events: auto;
   }
 
+  body.nav-open {
+    overflow: hidden;
+  }
+
   .site-nav a:not(.btn-nav-rdv) {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .btn-nav-rdv {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .nav-social {
@@ -1616,7 +1626,7 @@ a {
     width: min(100%, 24rem);
     display: grid;
     justify-items: center;
-    gap: 0.7rem;
+    gap: 0.55rem;
   }
 
   .mega-toggle {
@@ -1638,30 +1648,39 @@ a {
     border: 1px solid var(--line);
     border-top: 1px solid var(--accent);
     transition:
-      max-height 0.25s ease,
-      opacity 0.2s ease,
-      transform 0.2s ease;
+      max-height 0.3s ease,
+      opacity 0.2s ease;
     max-height: 0;
     overflow: hidden;
+    transform: none;
   }
 
   .mega-menu.is-hidden {
     visibility: visible;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-4px);
+    transform: none;
   }
 
   .mega-menu.is-open {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
-    max-height: 1000px;
+    transform: none;
+    max-height: 1200px;
   }
 
   .mega-menu__inner {
     grid-template-columns: 1fr;
-    padding: 0.85rem;
+    padding: 0.75rem;
+    gap: 0.6rem;
+  }
+
+  .mega-item {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .mega-item__desc {
+    font-size: 0.78rem;
   }
 }
 
