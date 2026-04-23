@@ -13,6 +13,8 @@
 
   const toggle = document.querySelector(".menu-toggle");
   const nav = document.getElementById("site-menu");
+  /* Mémorise le parent d'origine du nav (dans le header) */
+  const navParent = nav ? nav.parentElement : null;
   const megaNavItem = document.querySelector("[data-nav-item-mega]");
   const megaMenu = megaNavItem?.querySelector(".mega-menu");
   const megaToggle = megaNavItem?.querySelector(".mega-toggle");
@@ -20,16 +22,37 @@
 
   const closeMenu = () => {
     if (!nav || !toggle) return;
-    nav.classList.remove("is-open");
-    document.body.classList.remove("nav-open");
     toggle.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-open");
+    nav.classList.remove("is-open");
+    /* Remet le nav dans le header après la fin de l'animation slide-up */
+    const onEnd = (e) => {
+      if (e.propertyName !== "transform") return;
+      nav.removeEventListener("transitionend", onEnd);
+      if (navParent && nav.parentElement === document.body) {
+        navParent.appendChild(nav);
+      }
+    };
+    nav.addEventListener("transitionend", onEnd);
   };
 
   const openMenu = () => {
     if (!nav || !toggle) return;
-    nav.classList.add("is-open");
-    document.body.classList.add("nav-open");
     toggle.setAttribute("aria-expanded", "true");
+    document.body.classList.add("nav-open");
+    /* Déplace le nav dans <body> pour échapper au containing-block du header
+       (backdrop-filter webkit crée un containing-block qui empêche position:fixed
+       de couvrir toute la largeur depuis l'intérieur du header) */
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      document.body.appendChild(nav);
+      /* Double requestAnimationFrame : laisse le navigateur peindre
+         l'état initial (transform: -110%) avant de démarrer la transition */
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => nav.classList.add("is-open"))
+      );
+    } else {
+      nav.classList.add("is-open");
+    }
   };
 
   if (toggle && nav) {
@@ -42,7 +65,47 @@
         if (window.matchMedia("(max-width: 767px)").matches) closeMenu();
       });
     });
+    /* Ferme en cliquant en dehors du panneau */
+    document.addEventListener("click", (e) => {
+      if (
+        window.matchMedia("(max-width: 767px)").matches &&
+        nav.classList.contains("is-open") &&
+        !nav.contains(e.target) &&
+        !toggle.contains(e.target)
+      ) {
+        closeMenu();
+      }
+    });
   }
+
+  /* ── Injection d'icônes Lucide dans les liens du menu mobile ── */
+  (function injectNavIcons() {
+    if (!nav) return;
+    const icons = {
+      chirurgien:
+        '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>',
+      intervention:
+        '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>',
+      faq: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/></svg>',
+      contact:
+        '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>',
+    };
+    nav.querySelectorAll("a[data-nav]").forEach((link) => {
+      const text = link.textContent.trim().toLowerCase();
+      let svg = null;
+      if (text.includes("chirurgien")) svg = icons.chirurgien;
+      else if (text.includes("intervention")) svg = icons.intervention;
+      else if (text === "faq") svg = icons.faq;
+      else if (text.includes("contact")) svg = icons.contact;
+      if (svg) {
+        const span = document.createElement("span");
+        span.className = "nav-icon";
+        span.setAttribute("aria-hidden", "true");
+        span.innerHTML = svg;
+        link.prepend(span);
+      }
+    });
+  })();
 
   const closeMega = () => {
     if (!megaMenu || !megaToggle) return;

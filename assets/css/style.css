@@ -1563,125 +1563,121 @@ a {
 }
 
 @media (max-width: 767px) {
-  /* Sur mobile : masquer le texte de marque, garder juste le logo rond */
   .brand-text {
     display: none;
   }
-  .nav-instagram {
+  .brand-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Toggle au-dessus de l'overlay, légèrement décalé du bord */
+  .menu-toggle {
+    position: relative;
+    z-index: 9001;
+    margin-right: 0.75rem;
+  }
+
+  /* Nav dans le header : invisible — sera déplacé dans <body> par JS */
+  .nav-inner > .site-nav {
     display: none;
   }
-  .brand-logo {
-    width: 68px;
-    height: 68px;
-  }
+}
 
-  .site-nav {
-    display: flex;
-    position: fixed;
-    inset: 0;
-    z-index: 200;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.1rem;
-    background: var(--bg);
-    padding: calc(5rem + env(safe-area-inset-top)) 1.5rem
-      calc(6rem + env(safe-area-inset-bottom));
-    margin-right: 0;
-    overflow-y: auto;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition:
-      opacity 0.3s ease,
-      visibility 0.3s ease;
-  }
+/* ── Panneau mobile — actif uniquement quand le nav est dans <body> ──
+   (body > .site-nav n'existe QUE quand JS le déplace, jamais sur desktop) */
+body > .site-nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  background: #ffffff;
+  padding: 5rem 2rem 2.5rem;
+  box-shadow: 0 10px 40px rgba(20, 25, 43, 0.15);
+  transform: translateY(-110%);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
 
-  .site-nav.is-open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
+body > .site-nav.is-open {
+  transform: translateY(0);
+  pointer-events: auto;
+}
 
-  body.nav-open {
-    overflow: hidden;
-  }
+/* Masquer méga-menu, toggle et Instagram */
+body > .site-nav .mega-toggle,
+body > .site-nav .mega-menu,
+body > .site-nav .nav-social {
+  display: none !important;
+}
 
-  .site-nav a:not(.btn-nav-rdv) {
-    font-size: 1.05rem;
-  }
+/* Wrapper Interventions transparent dans le flux flex */
+body > .site-nav .nav-item--has-mega {
+  display: contents;
+}
 
-  .btn-nav-rdv {
-    margin-top: 0.5rem;
-  }
+/* Liens */
+body > .site-nav a[data-nav] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  width: 100%;
+  font-family: var(--font-title);
+  font-size: 2.1rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--text);
+  text-decoration: none;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(20, 25, 43, 0.08);
+  transition: color 0.2s ease;
+}
 
-  .nav-social {
-    width: 2.6rem;
-    height: 2.6rem;
-  }
+body > .site-nav > a[data-nav]:first-child {
+  border-top: 1px solid rgba(20, 25, 43, 0.08);
+}
 
-  .nav-item--has-mega {
-    width: min(100%, 24rem);
-    display: grid;
-    justify-items: center;
-    gap: 0.55rem;
-  }
+body > .site-nav a[data-nav]:hover {
+  color: var(--accent);
+}
 
-  .mega-toggle {
-    display: inline-block;
-    border: 1px solid var(--line);
-    background: transparent;
-    color: var(--text-secondary);
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 0.45rem 0.75rem;
-    cursor: pointer;
-  }
+/* Icônes injectées par JS */
+.nav-icon {
+  display: none;
+}
 
-  .mega-menu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    border: 1px solid var(--line);
-    border-top: 1px solid var(--accent);
-    transition:
-      max-height 0.3s ease,
-      opacity 0.2s ease;
-    max-height: 0;
-    overflow: hidden;
-    transform: none;
-  }
+body > .site-nav .nav-icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  opacity: 0.55;
+}
 
-  .mega-menu.is-hidden {
-    visibility: visible;
-    opacity: 0;
-    pointer-events: none;
-    transform: none;
-  }
-
-  .mega-menu.is-open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: none;
-    max-height: 1200px;
-  }
-
-  .mega-menu__inner {
-    grid-template-columns: 1fr;
-    padding: 0.75rem;
-    gap: 0.6rem;
-  }
-
-  .mega-item {
-    padding: 0.75rem 0.85rem;
-  }
-
-  .mega-item__desc {
-    font-size: 0.78rem;
-  }
+/* Bouton RDV */
+body > .site-nav .btn-nav-rdv {
+  display: block;
+  width: 100%;
+  max-width: 16rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.83rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius);
 }
 
 @media (min-width: 768px) {
@@ -1694,24 +1690,73 @@ a {
     margin-right: 0;
   }
 
+  /* Nav desktop : horizontal, dans le header */
   .site-nav {
     display: flex;
     position: static;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    z-index: auto;
     flex-direction: row;
+    align-items: center;
     background: transparent;
     padding: 0;
     margin-right: 0;
+    width: auto;
+    height: auto;
+    transform: none;
+    transition: none;
+    box-shadow: none;
+    pointer-events: auto;
   }
 
   .menu-toggle {
     display: none;
+    margin-right: 0;
   }
 
   .mobile-call-bar {
     display: none;
+  }
+
+  .nav-item--has-mega {
+    display: block;
+  }
+
+  /* Réinitialise la typo des liens (mobile → desktop) */
+  .site-nav a[data-nav] {
+    display: inline;
+    justify-content: initial;
+    width: auto;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: normal;
+    color: rgba(26, 25, 22, 0.82);
+    padding: 0;
+    border: none;
+    gap: 0;
+  }
+
+  .btn-nav-rdv {
+    display: inline-block;
+    width: auto;
+    max-width: none;
+    margin-top: 0;
+    padding: 0.65rem 1.35rem;
+    text-align: left;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-transform: none;
+  }
+
+  .mega-menu {
+    display: block !important;
+  }
+
+  .nav-social {
+    display: flex !important;
   }
 }
 
